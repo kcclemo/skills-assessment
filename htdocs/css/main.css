@@ -1,0 +1,28 @@
+/* Minor normalization for fonts and line heights for multiple browsers */
+html {
+    line-height: 1.0;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    color: #0be4ec;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #0be4ec;
+}
+
+/* Form control overrides */
+.form-table .phone { /* Hide phone numbers until selection is toggled */
+    display: none;
+    text-align: left;
+}
+
+.form-table .email {
+    display: table-cell;
+}

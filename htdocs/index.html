@@ -121,5 +121,22 @@
                 </table>
             </div>
         </div>
+        <script type="text/javascript">
+            function toggle(selector) {
+                var nodes = document.querySelectorAll(selector),
+                    node,
+                    styleProperty = function(a, b) {
+                        return window.getComputedStyle ? window.getComputedStyle(a).getPropertyValue(b) : a.currentStyle[b];
+                    };
+                [].forEach.call(nodes, function( a, b ) {
+                    node = a;
+                    node.style.display = styleProperty(node, 'display') === 'table-cell' ? 'none' : 'table-cell';
+                });
+            }
+            document.getElementById('contact-method').onchange = function(){
+                toggle('.phone');
+                toggle('.email');
+            };
+        </script>
     </body>
 </html>
