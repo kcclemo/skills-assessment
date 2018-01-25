@@ -151,3 +151,28 @@ a {
 .form-table .email {
     display: table-cell;
 }
+
+/* CSS only hover menu, because we can 😉 */
+.info-inner {
+    line-height: 1.15;
+    width: 97%;
+    padding: 1em;
+}
+
+div[class^="info"] {
+    position: relative;
+    display: none;
+}
+
+.form-table tbody tr:hover div[class^="info"] {
+    display: block;
+    z-index: 99;
+}
+
+div[class^="info"] .info-inner {
+    position: absolute;
+    top: -1.7em;
+    left: -0.85em;
+    white-space: nowrap;
+    background-color: #464646;
+}
